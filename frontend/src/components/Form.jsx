@@ -18,11 +18,14 @@ const Form = () => {
     const password = passwordRef.current.value;
 
     try {
-      const response = await axios.post("http://localhost:8080/api/signup", {
-        name,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://todo-task-backend-diji.onrender.com/api/signup",
+        {
+          name,
+          email,
+          password,
+        },
+      );
 
       if (response) {
         dispatch(userdata(response.data));
@@ -48,3 +51,6 @@ const Form = () => {
 };
 
 export default Form;
+
+// todo-app
+//7hsfPkz3CXov6Jrj
